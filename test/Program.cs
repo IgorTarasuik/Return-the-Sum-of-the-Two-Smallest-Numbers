@@ -11,21 +11,19 @@ namespace test
         static void Main(string[] args)
         {
             int[] check = { 2, 9, 6, -1 };
-            SumSmallest(check);
+            SumSmallest(check);// Return the Sum of the Two Smallest Numbers
 
         }
 
         public static int SumSmallest(int[] values)
         {
 
-            //changes
-            IEnumerable<int> resultPositive = values.Where(i => i >= 0);
-            int[] resultFiltered = resultPositive.OrderBy(i => i).ToArray();
+
+            IEnumerable<int> resultPositive = values.Where(i => i >= 0); // get possitive results from values. 
+            int[] resultFiltered = resultPositive.OrderBy(i => i).ToArray(); // ordering numbers in asc order
             int resultFinal = resultFiltered[0] + resultFiltered[1];
-            return resultFinal; 
+            return resultFinal;
         }
-        int hello;
-          
     }
 
    
