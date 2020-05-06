@@ -18,13 +18,13 @@ namespace test
         public static int SumSmallest(int[] values)
         {
 
-            
+            //changes
             IEnumerable<int> resultPositive = values.Where(i => i >= 0);
             int[] resultFiltered = resultPositive.OrderBy(i => i).ToArray();
             int resultFinal = resultFiltered[0] + resultFiltered[1];
             return resultFinal; 
         }
-
+        int hello;
           
     }
 
